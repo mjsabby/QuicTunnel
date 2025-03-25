@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="QuicTunnelClient/QuicTunnelClient.csproj" />
+  <Project Path="QuicTunnelReceiver/QuicTunnelReceiver.csproj" />
+  <Project Path="QuicTunnelRelay/QuicTunnelRelay.csproj" />
+</Solution>

@@ -1,0 +1,27 @@
+# Example SSH config file (~/.ssh/config)
+# This shows how to configure SSH to use QuicTunnelClient as a ProxyCommand
+
+# Target machine accessible through QuicTunnel
+Host my-remote-machine
+    # The hostname doesn't matter since the connection will go through the tunnel
+    # It's used for identification in the tunnel system
+    HostName my-remote-machine
+    User your-username
+    
+    # Path to the QuicTunnelClient executable
+    # On Windows, use the full path with .exe extension
+    ProxyCommand /path/to/QuicTunnelClient
+    
+    # Standard SSH options
+    IdentityFile ~/.ssh/id_rsa
+    ServerAliveInterval 30
+    ServerAliveCountMax 3
+    
+    # You can add multiple target machines, just use different Host entries
+    # and make sure the proper identification is set up in the tunnel system
+
+# Example with additional parameters (if implemented)
+# Host another-machine
+#    HostName another-machine
+#    User another-username
+#    ProxyCommand /path/to/QuicTunnelClient --target another-machine
